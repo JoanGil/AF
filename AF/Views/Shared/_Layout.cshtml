@@ -49,7 +49,8 @@
         var request = $.ajax({
             url: "/Cameres/Index/",
             contentType: "application/json; charset=UTF-8",
-            type: "POST",
+            traditional: true, 
+            type: "GET",
             data: {
                 Camera: camera
             },

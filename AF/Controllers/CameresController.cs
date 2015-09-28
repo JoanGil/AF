@@ -9,8 +9,9 @@ namespace AF.Controllers
     public class CameresController : Controller
     {
         // GET: Cameres
-        public ActionResult Index(String Cameres)
+        public ActionResult Index(String Camera)
         {
+            //Call DAO and get from a suposed DB, return view with object and information
             return View();
         }
     }
