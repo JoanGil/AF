@@ -186,6 +186,7 @@
     <Content Include="Views\Home\Fotometres.cshtml" />
     <Content Include="Views\Home\Contacte.cshtml" />
     <Content Include="Views\Cameres\Index.cshtml" />
+    <Content Include="Views\Shared\_Breadcrumb.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
