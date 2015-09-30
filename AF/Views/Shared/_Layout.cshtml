@@ -25,7 +25,18 @@
 
 <script>
 
-    $(document).off('click', '.nav-menu').on('click', '.nav-menu', function () {
+    $(document).off('click', '.items a').on('click', '.items a', function () {
+
+        //Breadcrumb dynamic management
+        var $this = $(this), $bc = $('<div class="item"></div>');
+
+        $this.parents('li').each(function (n, li) {
+            var $a = $(li).children('a').clone();
+            $bc.prepend(' / ', $a);
+        });
+        $('.breadcrumb').html($bc.prepend('<a class="nav-menu" href="#" name="Index"><i class="fa fa-home fa-fw"></i>Home</a>'));
+
+        //Redirect to view with ajax
         var view = $(this).attr("name");
         var request = $.ajax({
             url: "/Home/" + view,
@@ -66,6 +77,7 @@
         });
     });
 
+    
 
 
 </script>
